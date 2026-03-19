@@ -1,5 +1,7 @@
 # Статьи (отдельный репозиторий)
 
+**Публично на GitHub:** https://github.com/msrv-tech/articles
+
 Каталог **`D:\PROG\articles`** — **корень публичного Git-репозитория** со статьями и медиа. Он **вынесен за пределы** приватного проекта [`Иски`](../Иски) и с ним **не связан** одним общим `.git`.
 
 Открывать в редакторе удобно через multi-root workspace: [`../iski-and-articles.code-workspace`](../iski-and-articles.code-workspace).
@@ -48,7 +50,7 @@ gh repo create articles --public --source=. --remote=origin --push --description
 Если репозиторий уже создан на сайте — только привязка и пуш:
 
 ```bash
-git remote add origin https://github.com/USER/REPO.git
+git remote add origin https://github.com/msrv-tech/articles.git
 git push -u origin main
 ```
 
