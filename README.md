@@ -11,7 +11,8 @@
 ├── README.md                 ← этот файл
 ├── .gitignore
 └── odin-sait-chetyre-iska/
-    ├── README.md             ← черновик статьи для Хабра
+    ├── README.md             ← указатель на статью
+    ├── article.md            ← черновик статьи для Хабра (публичная копия)
     └── media/
         ├── aeroplan_animator_photo.jpg
         ├── aeroplan_reference_1.jpg
@@ -28,16 +29,20 @@
 
 ## Публикация на GitHub
 
-1. Создай на GitHub **пустой публичный** репозиторий.
-2. В этом каталоге:
+Нужен [GitHub CLI](https://cli.github.com/) (`gh`) и вход: `gh auth login`.
+
+Создать **публичный** репозиторий из этой папки и запушить `main` (имя репо по умолчанию — `articles`; если занято — укажи другое):
 
 ```bash
 cd D:\PROG\articles
-git remote add origin https://github.com/USER/REPO.git
-git branch -M main
-git push -u origin main
+gh repo create articles --public --source=. --remote=origin --push --description "Статьи и медиа"
 ```
 
-Локально уже есть начальный коммит; при желании посмотри `git log`.
+Если репозиторий уже создан на сайте — только привязка и пуш:
+
+```bash
+git remote add origin https://github.com/USER/REPO.git
+git push -u origin main
+```
 
 Перед пушем проверь, что в коммит не попадают лишние секреты. Вложенных `.git` в подпапках быть не должно (см. [`.gitignore`](.gitignore)).
